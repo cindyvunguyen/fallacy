@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    font-family: Visby;
+    background-color: #468091;
+    color: #FAFAFA;
+}
+
+@font-face {
+    font-family: Visby;
+    src: url(/fonts/VisbyRoundCF-Regular.otf);
+}
+
+@font-face {
+    font-family: Visby;
+    src: url(/fonts/VisbyRoundCF-ExtraBold.otf);
+    font-weight: bold;
+}
+
+/* CINDY START */
+
+/* CINDY END */
+
+/* SOPHIA START */
+
+/* SOPHIA END */
+
+/* CHLOE START */
+
+/* CHLOE END */
