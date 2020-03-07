@@ -21,6 +21,42 @@ body {
     font-weight: bold;
 }
 
+.pink-button {
+    height: 100px;
+    width: 700px;
+    background-color: #ED2265;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+}
+
+.white-button {
+    height: 100px;
+    width: 700px;
+    background-color: #FAFAFA;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #303030
+}
+
+.grey-button {
+    height: 100px;
+    width: 700px;
+    background-color: #303030;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+}
+
 /* CINDY START */
 
 /* CINDY END */
