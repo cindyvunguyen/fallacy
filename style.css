@@ -12,12 +12,12 @@ body {
 
 @font-face {
     font-family: Visby;
-    src: url("/fonts/VisbyRoundCF-Regular.woff");
+    src: url("fonts/VisbyRoundCF-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: Visby;
-    src: url("/fonts/VisbyRoundCF-ExtraBold.woff");
+    src: url("fonts/VisbyRoundCF-ExtraBold.woff") format("woff");
     font-weight: bold;
 }
 
