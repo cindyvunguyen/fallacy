@@ -80,8 +80,8 @@ body {
 #correct-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -127,8 +127,8 @@ body {
 #incorrect-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;

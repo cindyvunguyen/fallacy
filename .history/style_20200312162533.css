@@ -80,15 +80,15 @@ body {
 #correct-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
     background-color: #6eb748; /* incorrect, change to #860000*/
 }
 
-#icon {
+#correct-icon {
     background-color: olive;
     width: 150px;
     height: 150px;
@@ -98,7 +98,7 @@ body {
 #cp-text1 {
     font-size: 36pt;
     font-weight: bold;
-    padding: 35px 0;
+    padding: 50px 0;
 }
 
 #cp-text2 {
@@ -117,7 +117,7 @@ body {
 }
 
 #cp-a-outcome {
-    line-height: 60px;
+    line-height: 25px;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -127,8 +127,8 @@ body {
 #incorrect-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -145,7 +145,7 @@ body {
 #ip-text1 {
     font-size: 36pt;
     font-weight: bold;
-    padding: 35px 0;
+    padding: 50px 0;
 }
 
 #ip-text2 {
@@ -164,7 +164,7 @@ body {
 }
 
 #ip-a-outcome {
-    line-height: 60px;
+    line-height: 25px;
     display: flex;
     flex-direction: column;
     align-items: center; 
