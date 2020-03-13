@@ -82,8 +82,8 @@ body {
 #correct-incorrect-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -130,8 +130,8 @@ body {
 #results-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -157,8 +157,33 @@ body {
     font-weight: bold;
 }
 
-#rp-congrats {
+#game-over-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #860000; /* for game over page when combined */
+}
+
+#gop-text {
+    padding: 0 0 75px 0;
+    line-height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+#gop-message {
     font-size: 48pt;
+    font-weight: bold;
+}
+
+#gop-results {
+    font-size: 16pt;
     font-weight: bold;
 }
 

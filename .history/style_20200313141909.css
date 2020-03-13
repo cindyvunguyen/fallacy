@@ -79,11 +79,11 @@ body {
 /* SOPHIA START */
 
 /* correct page */
-#correct-incorrect-page {
+#correct-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -97,28 +97,76 @@ body {
     border-radius: 50%;
 }
 
-#cip-text1 {
+#cp-text1 {
     font-size: 36pt;
     font-weight: bold;
     padding: 35px 0;
 }
 
-#cip-text2 {
+#cp-text2 {
     font-size: 16pt;
     font-weight: bold;
 }
 
-#cip-fallacy {
+#cp-fallacy {
     font-size: 36pt;
     font-weight: bold;
 }
 
-#cip-definition {
+#cp-definition {
     font-size: 16pt;
     line-height: 150px;
 }
 
-#cip-a-outcome {
+#cp-a-outcome {
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* icorrect page */
+#incorrect-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #860000;
+}
+
+#incorrect-icon {
+    background-color: olive;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#ip-text1 {
+    font-size: 36pt;
+    font-weight: bold;
+    padding: 35px 0;
+}
+
+#ip-text2 {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#ip-fallacy {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+#ip-definition {
+    font-size: 16pt;
+    line-height: 150px;
+}
+
+#ip-a-outcome {
     line-height: 60px;
     display: flex;
     flex-direction: column;
@@ -130,8 +178,8 @@ body {
 #results-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -157,8 +205,33 @@ body {
     font-weight: bold;
 }
 
-#rp-congrats {
+#game-over-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #860000; /* for game over page when combined */
+}
+
+#gop-text {
+    padding: 0 0 75px 0;
+    line-height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+#gop-message {
     font-size: 48pt;
+    font-weight: bold;
+}
+
+#gop-results {
+    font-size: 16pt;
     font-weight: bold;
 }
 

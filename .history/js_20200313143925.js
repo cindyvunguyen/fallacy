@@ -13,7 +13,7 @@
 //            fallacy:"AD HOMINEM",
 //            definition:"Attacking someone instead of listening to what they're saying."
 
-function incorrectPage() {
+function switchPage() {
     document.querySelector("#correct-incorrect-page").style.backgroundColor = "#860000";
     document.querySelector("#cip-text1").innerText = "OH NO!";
     document.querySelector("#cip-text2").innerText = "You committed the";
