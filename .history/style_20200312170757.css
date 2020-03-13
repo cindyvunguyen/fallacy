@@ -178,63 +178,22 @@ body {
 #results-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    /* background-color: #860000; */ /* for game over page when combined */
-}
-
-#rp-text {
-    padding: 0 0 75px 0;
-    line-height: 75px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-#rp-message {
-    font-size: 48pt;
-    font-weight: bold;
-}
-
-#rp-results {
-    font-size: 16pt;
-    font-weight: bold;
-}
-
-#game-over-page {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    background-color: #860000; /* for game over page when combined */
+    background-color: #6eb748; /* incorrect, change to #860000*/
 }
 
-#gop-text {
-    padding: 0 0 75px 0;
-    line-height: 75px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
+#rp-text {
+    padding: 50px;
 }
 
-#gop-message {
-    font-size: 48pt;
+#rp-message {
+    font-size: 36pt;
     font-weight: bold;
 }
-
-#gop-results {
-    font-size: 16pt;
-    font-weight: bold;
-}
-
 /* SOPHIA END */
 
 /* CHLOE START */

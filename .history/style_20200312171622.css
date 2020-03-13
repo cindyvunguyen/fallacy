@@ -202,7 +202,6 @@ body {
 
 #rp-results {
     font-size: 16pt;
-    font-weight: bold;
 }
 
 #game-over-page {
@@ -213,8 +212,7 @@ body {
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    background-color: #860000; /* for game over page when combined */
-}
+    background-color: #860000; 
 
 #gop-text {
     padding: 0 0 75px 0;
@@ -232,7 +230,6 @@ body {
 
 #gop-results {
     font-size: 16pt;
-    font-weight: bold;
 }
 
 /* SOPHIA END */
