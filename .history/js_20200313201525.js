@@ -38,37 +38,11 @@ function reviewPage() {
 
 function threeFallacies() {
     document.querySelector("#fallacy-review-page").style.display = "none";
-    document.querySelector("#three-fallacies-page").style.display = "flex";
+    document.querySelector("#fallacy-review-page").style.display = "flex";
 }
 
-// var data = {
-//     dnum: 0,
-//     definitions: [
-//         {
-//             fallacy:"Appeal to Emotion is an argument that is made due to the manipulation of emotions, rather than using valid reasoning."
-//         },
-//         {
-//             fallacy:"Ad Hominem is an argument that is built around an emotional appeal, rather than logical appeal."
-//         },
-//     ]
-// }
-
-// function fallacyChange() {
-//     document.querySelector("#tfp-text").innerHTML = data.definitions
-// }
-
-function fallacyChange() {
-    document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> is an argument that is made due to the manipulation of emotions,<br>rather than using valid reasoning.</p>";
+function fallacyChange1() {
+    document.querySelector("#tfp-text").innerHTML = "OH NO!";
 }
-
-// function fallacyChange(state) {
-//     switch(state) {
-//         case 0:
-//             document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> is an argument that is made due to the manipulation of emotions,<br>rather than using valid reasoning.</p>";
-//         case 1:
-//             document.querySelector("#tfp-text").innerHTML = "<p><b>Ad Hominem</b> is an argument that is built around an emotional appeal,<br>rather than logical appeal.</p>";
-//         break;
-//     }
-// }
 
 // CHLOE END

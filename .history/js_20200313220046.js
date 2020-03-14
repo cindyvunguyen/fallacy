@@ -41,25 +41,17 @@ function threeFallacies() {
     document.querySelector("#three-fallacies-page").style.display = "flex";
 }
 
-// var data = {
-//     dnum: 0,
-//     definitions: [
-//         {
-//             fallacy:"Appeal to Emotion is an argument that is made due to the manipulation of emotions, rather than using valid reasoning."
-//         },
-//         {
-//             fallacy:"Ad Hominem is an argument that is built around an emotional appeal, rather than logical appeal."
-//         },
-//     ]
-// }
+var fallacyDefintion = 1;
+function fallacyChange() {
+    var myInp = document.querySelector("#tfp-text").innerText;
+    if (myInp === fallacyDefintion) {
+    document.querySelector("#tfp-text").innerText = "Appeal to Emotion is an argument that is made due to the manipulation of emotions, rather than using valid reasoning.";
+    }
+}
 
 // function fallacyChange() {
-//     document.querySelector("#tfp-text").innerHTML = data.definitions
+//     document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> is an argument that is made due to the manipulation of emotions,<br>rather than using valid reasoning.</p>";
 // }
-
-function fallacyChange() {
-    document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> is an argument that is made due to the manipulation of emotions,<br>rather than using valid reasoning.</p>";
-}
 
 // function fallacyChange(state) {
 //     switch(state) {

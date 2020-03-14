@@ -170,30 +170,23 @@ body {
 #review-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    }
-
-#rp-text {
-    font-size: 48pt;
-    font-weight: bold;
-    text-align: center;
-}
-
-#fallacy-review-page {
-    width: 100vw;
-    height: 100vh;
     /* display: flex; */
     display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    font-size: 16pt;
+    }
+
+/* #rp-text {
+    font-size: 48pt;
+    font-weight: bold;
     text-align: center;
 }
+
+
+#r2-bold {
+    font-weight: bold;
+} */
 
 #text-emphasis {
     color: #F5FD37;
@@ -202,8 +195,8 @@ body {
 #three-fallacies-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
@@ -212,7 +205,6 @@ body {
 #tfp-text {
     font-size: 16pt;
     text-align: center;
-    margin: 50px 0 0 0;
 }
 
 /* CHLOE END */

@@ -170,24 +170,18 @@ body {
 #review-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
     }
 
-#rp-text {
-    font-size: 48pt;
-    font-weight: bold;
-    text-align: center;
-}
-
 #fallacy-review-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     flex-direction: column;
     align-items: center; 
     justify-content: center;
