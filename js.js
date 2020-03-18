@@ -145,11 +145,11 @@ showQuestions();
 
 function checkAnswer() {
     if (selected_answer === data.questions[data.qnum].correct_answer) {
-        // INSERT CODE HERE TO GO TO CORRECT PAGE
+        // INSERT CODE HERE TO GO TO CORRECT PAGE.
         document.querySelector("#scenario-prompt").innerText = "Sick dude.";
         // qnum++
     } else {
-        // INSERT CODE HERE TO GO TO INCORRECT PAGE
+        // INSERT CODE HERE TO GO TO INCORRECT PAGE.
         document.querySelector("#scenario-prompt").innerText = "You're wrong."
     }
 }
