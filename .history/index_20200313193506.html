@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FALLACIES</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="app">
+
+        <!-- CINDY START -->
+
+        <div id="home-page"></div>
+
+        <div id="lets-start-page"></div>
+
+        <div id="question-page"></div>
+
+        <!-- CINDY END -->
+
+        <!-- SOPHIA START -->
+
+        <!-- when making it one page -->
+
+        <div id="correct-incorrect-page">
+            <div id="icon"></div>
+            <div id="cip-text1">HORRAY!</div> <!-- incorrect, change to "oh no!" -->
+            <div id="cip-a-outcome">
+                <div id="cip-text2">You avoided the</div> <!-- icorrect, change to "you committed the"-->
+                <div id="cip-fallacy">BANDWAGON FALLACY</div>
+                <div id="cip-text2">which is</div>
+            </div>
+            <div id="cip-definition">Listening to what is popular instead of listening to yourself.</div>
+            <button class="white-button" onclick="incorrectPage()">NEXT QUESTION</button> <!-- placeholder for js page switch-->
+        </div>
+
+        <div id="results-page">
+            <div id="rp-text">
+                <div id="rp-message">YOU GOT...</div> <!-- game over, change to "game over" -->
+                <div id="rp-results"># out of 10 scenarios</div>  <!-- game over, change to "you commited too many fallacies" -->
+                <div id="rp-congrats">AMAZING JOB!</div> <!-- game over, message disappears -->
+            </div>
+            <button class="grey-button" onclick="gameOver()">VIEW FALLACIES</button>
+        </div>
+
+        <!-- SOPHIA END -->
+
+        <!-- CHLOE START -->
+
+        <div id="review-page">LET'S SUM UP<br>WHAT WE'VE GOT SO FAR!</div>
+
+        <div id="review2-page">
+            A fallacy is when someone is using bad reasoning when trying to make a point or argument.
+        </div>
+
+        <div id="fallacy-review-page"></div>
+
+        <div id="three-fallacies-page"></div>
+        <!-- change the page's content with JS to show all three fallacies when clicked -->
+        
+        <!-- CHLOE END -->
+        <script src="js.js"></script>
+    </div>
+</body>
+</html>

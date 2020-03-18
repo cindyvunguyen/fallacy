@@ -13,13 +13,11 @@ body {
 @font-face {
     font-family: Visby;
     src: url(fonts/VisbyRoundCF-Regular.otf) format("woff");
-    src: url("fonts/VisbyRoundCF-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: Visby;
     src: url(fonts/VisbyRoundCF-ExtraBold.otf) format("woff");
-    src: url("fonts/VisbyRoundCF-ExtraBold.woff") format("woff");
     font-weight: bold;
 }
 
@@ -75,103 +73,6 @@ body {
 }
 
 /* CINDY START */
-
-/* ====================  HOME PAGE ==================== */
-
-#home-page {
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-#hp-text1 {
-    font-size: 48pt;
-    font-weight: bold;
-    margin-bottom: 100px;
-}
-
-#hp-text2 {
-    font-size: 36pt;
-    font-weight: bold;
-    margin-bottom: 100px;
-}
-
-/* ====================  START PAGE ==================== */
-
-#lets-start-page {
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-    font-size: 48pt;
-    font-weight: bold;
-}
-
-/* ====================  QUESTION PAGE ==================== */
-#question-page {
-    width: 100vw;
-    height: 100vh;
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-}
-
-#scenario-number {
-    font-size: 36pt;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-#scenario-prompt {
-    font-size: 16pt;
-    margin-bottom: 25px;
-    max-width: 675px;
-}
-
-#scenario-illustration {
-    width: 700px;
-    height: 350px;
-    background-color: rgb(255, 181, 181);
-    margin-bottom: 25px;
-}
-
-#scenario-answer-buttons {
-    display: block;
-}
-
-.scenario-answer {
-    max-width: 375px;
-    white-space: normal;
-    height: 100px;
-    width: 400px;
-    background-color: #385166;
-    border: 0px;
-    border-radius: 75px;
-    font-family: Visby;
-    font-weight: bold;
-    font-size: 16pt;
-    color: #FAFAFA;
-    outline: 0;
-    margin: 25px;
-}
-
-#scenario-submit {
-    width: 400px;
-    font-size: 24pt;
-    opacity: 0.5;
-    transition: opacity 0.25s;
-}
 
 /* CINDY END */
 
@@ -269,52 +170,34 @@ body {
 #review-page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    }
-
-#rp-text {
     font-size: 48pt;
     font-weight: bold;
     text-align: center;
-}
-
-#fallacy-review-page {
+    }
+    
+#review2-page {
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    display: none;
-    flex-direction: column;
-    align-items: center; 
+    display: flex;
+    /* display: none; */
+    /* flex-direction: column; */
+    /* align-items: center;  */
     justify-content: center;
     font-size: 16pt;
     text-align: center;
 }
 
-#text-emphasis {
+#r2-bold {
+    font-weight: bold;
+}
+
+#r2-emphasis {
     color: #F5FD37;
 }
 
-#three-fallacies-page {
-    width: 100vw;
-    height: 100vh;
-    /* display: flex; */
-    display: none;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-#tfp-text {
-    font-size: 16pt;
-    text-align: center;
-    margin: 50px 0 0 0;
-}
-
 /* CHLOE END */
-
-/* CHLOE END */
-

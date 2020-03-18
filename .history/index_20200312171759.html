@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FALLACIES</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="app">
+
+        <!-- CINDY START -->
+
+        <div id="home-page"></div>
+
+        <div id="lets-start-page"></div>
+
+        <div id="question-page"></div>
+
+        <!-- CINDY END -->
+
+        <!-- SOPHIA START -->
+
+        <!-- when making it one page -->
+        <div id="correct-page">
+            <div id="icon"></div>
+            <div id="cp-text1">HORRAY!</div> <!-- incorrect, change to "oh no!" -->
+            <div id="cp-a-outcome">
+                <div id="cp-text2">You avoided the</div> <!-- icorrect, change to "you committed the"-->
+                <div id="cp-fallacy">BANDWAGON FALLACY</div>
+                <div id="cp-text2">which is</div>
+            </div>
+            <div id="cp-definition">Listening to what is popular instead of listening to yourself.</div>
+            <button class="white-button">NEXT QUESTION</button>
+        </div>
+
+        <div id="incorrect-page">
+            <div id="icon"></div>
+            <div id="cp-text1">OH NO!</div>
+            <div id="cp-a-outcome">
+                <div id="cp-text2">You committed the</div>
+                <div id="cp-fallacy">BANDWAGON FALLACY</div>
+                <div id="cp-text2">which is</div>
+            </div>
+            <div id="cp-definition">Listening to what is popular instead of listening to yourself.</div>
+            <button class="white-button">NEXT QUESTION</button>
+        </div>
+
+        <!-- the two above pages technically have the same HTML. so you can only have 1 div and change the CSS through JS. it's entirely up to you. -->
+
+        <div id="results-page">
+            <div id="rp-text">
+                <div id="rp-message">YOU GOT...</div>
+                <div id="rp-results"># out of 10 scenarios</div>
+                <div id="rp-message">AMAZING JOB!</div> <!-- message disappears -->
+            </div>
+            <button class="grey-button">VIEW FALLACIES</button>
+        </div>
+
+        <div id="game-over-page">
+            <div id="gop-text">
+                <div id="gop-message">GAME OVER</div>
+                <div id="gop-results">you committed too many fallacies</div>
+            </div>
+            <button class="grey-button">VIEW FALLACIES</button>
+        </div>
+
+        <!-- the two above pages technically have the same HTML, so you can only have 1 div and change the CSS through JS. it's entirely up to you. -->
+
+        <!-- SOPHIA END -->
+
+        <!-- CHLOE START -->
+
+        <div id="review-page"></div>
+
+        <div id="review2-page"></div>
+
+        <div id="fallacy-review-page"></div>
+
+        <div id="three-fallacies-page"></div>
+        <!-- change the page's content with JS to show all three fallacies when clicked -->
+        
+        <!-- CHLOE END -->
+        <script src="js.js"></script>
+    </div>
+</body>
+</html>

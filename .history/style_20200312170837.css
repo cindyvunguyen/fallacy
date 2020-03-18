@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    font-family: Visby;
+    background-color: #468091;
+    color: #FAFAFA;
+}
+
+@font-face {
+    font-family: Visby;
+    src: url(fonts/VisbyRoundCF-Regular.otf) format("woff");
+}
+
+@font-face {
+    font-family: Visby;
+    src: url(fonts/VisbyRoundCF-ExtraBold.otf) format("woff");
+    font-weight: bold;
+}
+
+.pink-button {
+    height: 100px;
+    width: 700px;
+    background-color: #ed2265;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+    outline: 0;
+}
+
+.pink-button:active {
+    background-color: #9c1542;
+}
+
+.white-button {
+    height: 100px;
+    width: 700px;
+    background-color: #FAFAFA;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #303030;
+    outline: 0;
+}
+
+.white-button:active {
+    background-color: #9e9e9e;
+}
+
+.grey-button {
+    height: 100px;
+    width: 700px;
+    background-color: #303030;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+    outline: 0;
+}
+
+.grey-button:active {
+    background-color: #000000;
+}
+
+/* CINDY START */
+
+/* CINDY END */
+
+/* SOPHIA START */
+
+/* correct page */
+#correct-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #6eb748; /* incorrect, change to #860000*/
+}
+
+#icon {
+    background-color: olive;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#cp-text1 {
+    font-size: 36pt;
+    font-weight: bold;
+    padding: 35px 0;
+}
+
+#cp-text2 {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#cp-fallacy {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+#cp-definition {
+    font-size: 16pt;
+    line-height: 150px;
+}
+
+#cp-a-outcome {
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* icorrect page */
+#incorrect-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #860000;
+}
+
+#incorrect-icon {
+    background-color: olive;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#ip-text1 {
+    font-size: 36pt;
+    font-weight: bold;
+    padding: 35px 0;
+}
+
+#ip-text2 {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+#ip-fallacy {
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+#ip-definition {
+    font-size: 16pt;
+    line-height: 150px;
+}
+
+#ip-a-outcome {
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* results page */
+#results-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #6eb748; /* incorrect, change to #860000*/
+}
+
+#rp-text {
+    padding: 50px;
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+#rp-message {
+    font-size: 48pt;
+    font-weight: bold;
+}
+/* SOPHIA END */
+
+/* CHLOE START */
+
+/* CHLOE END */
