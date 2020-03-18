@@ -12,16 +12,164 @@ body {
 
 @font-face {
     font-family: Visby;
-    src: url(/fonts/VisbyRoundCF-Regular.otf);
+    src: url("fonts/VisbyRoundCF-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: Visby;
-    src: url(/fonts/VisbyRoundCF-ExtraBold.otf);
+    src: url("fonts/VisbyRoundCF-ExtraBold.woff") format("woff");
     font-weight: bold;
 }
 
+.pink-button {
+    height: 100px;
+    width: 700px;
+    background-color: #ed2265;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+    outline: 0;
+}
+
+.pink-button:active {
+    background-color: #9c1542;
+}
+
+.white-button {
+    height: 100px;
+    width: 700px;
+    background-color: #FAFAFA;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #303030;
+    outline: 0;
+}
+
+.white-button:active {
+    background-color: #9e9e9e;
+}
+
+.grey-button {
+    height: 100px;
+    width: 700px;
+    background-color: #303030;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 36pt;
+    color: #FAFAFA;
+    outline: 0;
+}
+
+.grey-button:active {
+    background-color: #000000;
+}
+
 /* CINDY START */
+
+/* ====================  HOME PAGE ==================== */
+
+#home-page {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+#hp-text1 {
+    font-size: 48pt;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+#hp-text2 {
+    font-size: 36pt;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+/* ====================  START PAGE ==================== */
+
+#lets-start-page {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+/* ====================  QUESTION PAGE ==================== */
+#question-page {
+    width: 100vw;
+    height: 100vh;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+#scenario-number {
+    font-size: 36pt;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#scenario-prompt {
+    font-size: 16pt;
+    margin-bottom: 25px;
+    max-width: 675px;
+}
+
+#scenario-illustration {
+    width: 700px;
+    height: 350px;
+    background-color: rgb(255, 181, 181);
+    margin-bottom: 25px;
+}
+
+#scenario-answer-buttons {
+    display: block;
+}
+
+.scenario-answer {
+    max-width: 375px;
+    white-space: normal;
+    height: 100px;
+    width: 400px;
+    background-color: #385166;
+    border: 0px;
+    border-radius: 75px;
+    font-family: Visby;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #FAFAFA;
+    outline: 0;
+    margin: 25px;
+}
+
+#scenario-submit {
+    width: 400px;
+    font-size: 24pt;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+}
 
 /* CINDY END */
 
@@ -30,6 +178,5 @@ body {
 /* SOPHIA END */
 
 /* CHLOE START */
-
 
 /* CHLOE END */
