@@ -9,15 +9,34 @@
 <body>
     <div id="app">
 
-        This text should appear in Visby. Delete this line if you see it in Visby. :)
-
         <!-- CINDY START -->
 
-        <div id="home-page"></div>
+        <div id="home-page">
+            <div id="hp-text1">LET'S LEARN ABOUT FALLACIES!</div>
+            <div id="hp-text2">ARE YOU READY?</div>
+            <button class="pink-button" onclick="goStartPage()">YES I AM!</button>
+        </div>
 
-        <div id="lets-start-page"></div>
+        <div id="lets-start-page">
+            <div id="s-text">
+                <p>COOL!</p>
+                <p>LET'S GET STARTED.</p>
+            </div>
+        </div>
 
-        <div id="question-page"></div>
+        <div id="question-page">
+            <div id="scenario-number">
+                SCENARIO <span id=""></span>/10
+            </div>
+            <div id="scenario-prompt"> <!-- QUESTION HERE --></div>
+            <div id="scenario-illustration"></div>
+            <div id="what-do-you-do">What would you do?</div>
+            <div id="scenario-answer-buttons">
+                <button class="scenario-answer" id="left-answer" onclick="leftAnswer()">Example Answer 1</button>
+                <button class="scenario-answer" id="right-answer" onclick="rightAnswer()">Example Answer 2</button>
+            </div>
+            <button class="pink-button" id="scenario-submit" onclick="checkAnswer()">THIS IS MY ANSWER!</button>
+        </div>
 
         <!-- CINDY END -->
 
@@ -49,7 +68,7 @@
         <!-- change the page's content with JS to show all three fallacies when clicked -->
         
         <!-- CHLOE END -->
-        <script src="js.js"></script>
+        <script src="js.js" type="text/javascript"></script>
     </div>
 </body>
 </html>
