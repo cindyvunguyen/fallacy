@@ -26,9 +26,9 @@
 
         <div id="question-page">
             <div id="scenario-number">
-                SCENARIO <span id=""></span>/10
+                SCENARIO <span id="scenario-current-number"></span> OF 10
             </div>
-            <div id="scenario-prompt"> <!-- QUESTION HERE --></div>
+            <div id="scenario-prompt"> <!-- Scenario Here --></div>
             <div id="scenario-illustration"></div>
             <div id="what-do-you-do">What would you do?</div>
             <div id="scenario-answer-buttons">
@@ -42,18 +42,16 @@
 
         <!-- SOPHIA START -->
 
-        <!-- when making it one page -->
-
         <div id="correct-incorrect-page">
             <div id="icon"></div>
-            <div id="cip-text1">HORRAY!</div> <!-- incorrect, change to "oh no!" -->
+            <div id="cip-text1"><!-- HURRAY / OH NO --></div> 
             <div id="cip-a-outcome">
-                <div id="cip-text2">You avoided the</div> <!-- icorrect, change to "you committed the"-->
-                <div id="cip-fallacy">BANDWAGON FALLACY</div>
+                <div id="cip-text2"></div>
+                <div id="cip-fallacy"><!-- Fallacy Name --></div>
                 <div id="cip-text2">which is</div>
             </div>
-            <div id="cip-definition">Listening to what is popular instead of listening to yourself.</div>
-            <button class="white-button" onclick="incorrectPage()">NEXT QUESTION</button> <!-- placeholder for js page switch-->
+            <div id="cip-definition"><!-- Fallacy Definition --></div>
+            <button class="white-button" onclick="nextQuestion()">NEXT QUESTION</button>
         </div>
 
         <div id="results-page">
