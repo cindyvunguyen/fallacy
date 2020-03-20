@@ -152,6 +152,7 @@ function leftAnswer() {
     document.querySelector("#left-answer").style.border = "solid 5px #FAFAFA";
     document.querySelector("#right-answer").style.border = "0";
     document.querySelector("#scenario-submit").style.opacity = "1";
+    document.querySelector("#scenario-submit").style.pointerEvents = "auto";
     selected_answer = "left-answer";
 }
 
@@ -159,6 +160,7 @@ function rightAnswer() {
     document.querySelector("#right-answer").style.border = "solid 5px #FAFAFA";
     document.querySelector("#left-answer").style.border = "0";
     document.querySelector("#scenario-submit").style.opacity = "1";
+    document.querySelector("#scenario-submit").style.pointerEvents = "auto";
     selected_answer = "right-answer";
 }
 
@@ -167,20 +169,26 @@ function resetButtons() {
     document.querySelector("#right-answer").style.border = "0";
     document.querySelector("#left-answer").style.border = "0";
     document.querySelector("#scenario-submit").style.opacity = "0.5";
+    document.querySelector("#scenario-submit").style.pointerEvents = "none";
 }
 
 showQuestions();
 
+var game_score = 0;
+var health = 3;
+console.log("Game Score:" + game_score);
+console.log("Health:" + health);
+
 function checkAnswer() {
     if (selected_answer === data.questions[data.qnum].correct_answer) {
-        console.log(data.qnum)
 
         // switches the pages
         document.querySelector("#correct-incorrect-page").style.display = "flex";
         document.querySelector("#question-page").style.display = "none";
 
-        //
         correctPage();
+        game_score++;
+        console.log(game_score);
 
         // inputs the text required
         document.querySelector("#cip-fallacy").innerText = data.questions[data.qnum].fallacy;
@@ -195,6 +203,7 @@ function checkAnswer() {
 
         // makes the page incorrect
         incorrectPage();
+        health--;
         
         // inputs the text required
         document.querySelector("#cip-fallacy").innerText = data.questions[data.qnum].fallacy;
@@ -204,9 +213,10 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
-
-    if (data.qnum == 10) {
-        endGame();
+    if (health == 0) {
+        loseGame();
+    } else if (data.qnum == 10) {
+        winGame();
     } else {
 
         // switches pages
@@ -223,23 +233,9 @@ function nextQuestion() {
     }
 }
 
-function endGame() {
-    document.querySelector("#correct-incorrect-page").style.display = "none";
-    document.querySelector("#results-page").style.display = "flex";
-}
-
 // CINDY END
 
 // SOPHIA START
-
-//            fallacy:"BANDWAGON FALLACY",
-//            definition:"Listening to what is popular instead of listening to yourself."
-
-//            fallacy:"APPEAL TO EMOTIONS",
-//            definition:"Using people's feelings to convince them or win an argument."
-
-//            fallacy:"AD HOMINEM",
-//            definition:"Attacking someone instead of listening to what they're saying."
 
 function correctPage() {
     document.querySelector("#correct-incorrect-page").style.backgroundColor = "#6eb748";
@@ -255,11 +251,26 @@ function incorrectPage() {
     document.querySelector("#icon").style.backgroundColor = "#b34c20";
 }
 
-function gameOver() {
+// function endGame() {
+//     document.querySelector("#correct-incorrect-page").style.display = "none";
+//     document.querySelector("#results-page").style.display = "flex";
+// }
+
+function winGame() {
+    document.querySelector("#correct-incorrect-page").style.display = "none";
+    document.querySelector("#results-page").style.display = "flex";
+    document.querySelector("#rp-message").innerText = "YOU GOT...";
+    document.querySelector("#rp-results").innerText = game_score + " out of 10 scenarios!";
+    document.querySelector("#rp-message2").innerText = "AMAZING JOB!";
+}
+
+function loseGame() {
+    document.querySelector("#correct-incorrect-page").style.display = "none";
+    document.querySelector("#results-page").style.display = "flex";
     document.querySelector("#results-page").style.backgroundColor = "#860000";
     document.querySelector("#rp-message").innerText = "GAME OVER";
-    document.querySelector("#rp-results").innerText = "You committed too many fallacies";
-    document.querySelector("#rp-congrats").style.display = "none";
+    document.querySelector("#rp-results").innerText = "You committed too many fallacies...";
+    document.querySelector("#rp-message2").innerText = "Click below to review.";
 }
 
 // SOPHIA END

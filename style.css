@@ -171,6 +171,7 @@ body {
     font-size: 24pt;
     opacity: 0.5;
     transition: opacity 0.25s;
+    pointer-events: none;
 }
 
 /* CINDY END */
