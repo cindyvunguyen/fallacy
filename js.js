@@ -102,7 +102,7 @@ var data = {
             scene: 9,
             scenario: "A politician, Andrew argues that his opponent cannot possibly be a good choice for female voters because he married and divorced five times despite his competency in politics.",
             answers: [
-                "Why should I trust someone who failed their marriage FIVE times?!",
+                "Why should I trust someone who failed their marriage THREE times?!",
                 "I'm not voting for a marriage counselor. I need a competent and honest politician."
             ],
             correct_answer: "right-answer",
