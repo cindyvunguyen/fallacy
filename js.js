@@ -10,7 +10,7 @@ var data = {
                 "No... I think that's gross, so I'll pass."
             ],
             correct_answer: "right-answer",
-            img: "",
+            img: "scenario-images/scenario1.jpg",
             fallacy: "BANDWAGON FALLACY",
             explanation: "Listening to what is popular instead of listening to yourself."
         },
@@ -22,8 +22,8 @@ var data = {
                 "I think that is enough… They were crying! What a poor person."
             ],
             correct_answer: "left-answer",
-            img: "",
-            fallacy: "APPEAL TO EMOTION",
+            img: "scenario-images/scenario2.jpg",
+            fallacy: "APPEAL TO EMOTION FALLACY",
             explanation: "Using people's feelings to convince them or win an argument."
         },
         {
@@ -34,8 +34,8 @@ var data = {
                 "I don't think a prestigious college diploma matters."
             ],
             correct_answer: "right-answer",
-            img: "",
-            fallacy: "AD HOMINEM",
+            img: "scenario-images/scenario3.jpg",
+            fallacy: "AD HOMINEM FALLACY",
             explanation: "Attacking someone instead of listening to what they're saying."
         },
         {
@@ -46,7 +46,7 @@ var data = {
                 "Continue to play the piano because he really enjoys it."
             ],
             correct_answer: "right-answer",
-            img: "",
+            img: "scenario-images/scenario4.jpg",
             fallacy: "BANDWAGON FALLACY",
             explanation: "Listening to what is popular instead of listening to yourself."
         },
@@ -58,7 +58,7 @@ var data = {
                 "Join all the social medias to fit in! Cindy can't be a loser!"
             ],
             correct_answer: "left-answer",
-            img: "",
+            img: "scenario-images/scenario5.jpg",
             fallacy: "BANDWAGON FALLACY",
             explanation: "Listening to what is popular instead of listening to yourself."
         },
@@ -70,8 +70,8 @@ var data = {
                 "The commercial brings awareness. I will donate if I want to."
             ],
             correct_answer: "right-answer",
-            img: "",
-            fallacy: "APPEAL TO EMOTION",
+            img: "scenario-images/scenario6.jpg",
+            fallacy: "APPEAL TO EMOTION FALLACY",
             explanation: "Using people's feelings to convince them or win an argument."
         },
         {
@@ -82,8 +82,8 @@ var data = {
                 "Victor should eat it if he wants to. He should not be persuaded."
             ],
             correct_answer: "right-answer",
-            img: "",
-            fallacy: "APPEAL TO EMOTION",
+            img: "scenario-images/scenario7.jpg",
+            fallacy: "APPEAL TO EMOTION FALLACY",
             explanation: "Using people's feelings to convince them or win an argument."
         },
         {
@@ -94,7 +94,7 @@ var data = {
                 "Immediately join her friends’ fancy low-carb diet, since all her friends are doing it."
             ],
             correct_answer: "left-answer",
-            img: "",
+            img: "scenario-images/scenario8.jpg",
             fallacy: "BANDWAGON FALLACY",
             explanation: "Listening to what is popular instead of listening to yourself."
         },
@@ -106,8 +106,8 @@ var data = {
                 "I'm not voting for a marriage counselor. I need a competent and honest politician."
             ],
             correct_answer: "right-answer",
-            img: "",
-            fallacy: "AD HOMINEM",
+            img: "scenario-images/scenario9.jpg",
+            fallacy: "AD HOMINEM FALLACY",
             explanation: "Attacking someone instead of listening to what they're saying."
         },
         {
@@ -118,8 +118,8 @@ var data = {
                 "What's wrong with either of them? Both are great."
             ],
             correct_answer: "right-answer",
-            img: "",
-            fallacy: "AD HOMINEM",
+            img: "scenario-images/scenario10.jpg",
+            fallacy: "AD HOMINEM FALLACY",
             explanation: "Attacking someone instead of listening to what they're saying."
         }
     ]
@@ -135,6 +135,7 @@ function goStartPage() {
 function startQuiz() {
     document.querySelector("#lets-start-page").style.display = "none";
     document.querySelector("#question-page").style.display = "flex";
+    showQuestions();
 }
 
 // ==================== QUIZ ====================
@@ -142,6 +143,7 @@ function startQuiz() {
 function showQuestions() {
     document.querySelector("#scenario-current-number").innerText = data.questions[data.qnum].scene;
     document.querySelector("#scenario-prompt").innerText = data.questions[data.qnum].scenario;
+    document.querySelector("#scenario-illustration").style.backgroundImage = "url('" + data.questions[data.qnum].img + "')";
     document.querySelector("#left-answer").innerText = data.questions[data.qnum].answers[0];
     document.querySelector("#right-answer").innerText = data.questions[data.qnum].answers[1];
 }
@@ -172,8 +174,6 @@ function resetButtons() {
     document.querySelector("#scenario-submit").style.pointerEvents = "none";
 }
 
-showQuestions();
-
 var game_score = 0;
 var health = 3;
 console.log("Game Score:" + game_score);
@@ -186,9 +186,9 @@ function checkAnswer() {
         document.querySelector("#correct-incorrect-page").style.display = "flex";
         document.querySelector("#question-page").style.display = "none";
 
+        // makes the page correct
         correctPage();
         game_score++;
-        console.log(game_score);
 
         // inputs the text required
         document.querySelector("#cip-fallacy").innerText = data.questions[data.qnum].fallacy;
@@ -204,6 +204,7 @@ function checkAnswer() {
         // makes the page incorrect
         incorrectPage();
         health--;
+        decreaseHealth();
         
         // inputs the text required
         document.querySelector("#cip-fallacy").innerText = data.questions[data.qnum].fallacy;
@@ -218,19 +219,30 @@ function nextQuestion() {
     } else if (data.qnum == 10) {
         winGame();
     } else {
-
         // switches pages
         document.querySelector("#correct-incorrect-page").style.display = "none";
         document.querySelector("#question-page").style.display = "flex";
 
         resetButtons();
 
-        // inserts new question
-        document.querySelector("#scenario-current-number").innerText = data.questions[data.qnum].scene;
-        document.querySelector("#scenario-prompt").innerText = data.questions[data.qnum].scenario;
-        document.querySelector("#left-answer").innerText = data.questions[data.qnum].answers[0];
-        document.querySelector("#right-answer").innerText = data.questions[data.qnum].answers[1];
+        showQuestions();
     }
+}
+
+function decreaseHealth() {
+    if (health == 2) {
+        document.querySelector("#heart3").style.opacity = "0.25";
+    } else if (health == 1) {
+        document.querySelector("#heart2").style.opacity = "0.25";
+    } else if (health == 0) {
+        document.querySelector("#heart1").style.opacity = "0.25";
+    }
+}
+
+function resetHealth() {
+    document.querySelector("#heart1").style.opacity = "1";
+    document.querySelector("#heart2").style.opacity = "1";
+    document.querySelector("#heart3").style.opacity = "1";
 }
 
 // CINDY END
@@ -241,24 +253,20 @@ function correctPage() {
     document.querySelector("#correct-incorrect-page").style.backgroundColor = "#6eb748";
     document.querySelector("#cip-text1").innerText = "HORRAY!";
     document.querySelector("#cip-text2").innerText = "You avoided the";
-    document.querySelector("#icon").style.backgroundColor = "olive";
+    document.querySelector("#icon").src = "icons/happy-face.png";
 }
 
 function incorrectPage() {
     document.querySelector("#correct-incorrect-page").style.backgroundColor = "#860000";
     document.querySelector("#cip-text1").innerText = "OH NO!";
     document.querySelector("#cip-text2").innerText = "You committed the";
-    document.querySelector("#icon").style.backgroundColor = "#b34c20";
+    document.querySelector("#icon").src = "icons/sad-face.png";
 }
-
-// function endGame() {
-//     document.querySelector("#correct-incorrect-page").style.display = "none";
-//     document.querySelector("#results-page").style.display = "flex";
-// }
 
 function winGame() {
     document.querySelector("#correct-incorrect-page").style.display = "none";
     document.querySelector("#results-page").style.display = "flex";
+    document.querySelector("#results-page").style.backgroundColor = "#468091";
     document.querySelector("#rp-message").innerText = "YOU GOT...";
     document.querySelector("#rp-results").innerText = game_score + " out of 10 scenarios!";
     document.querySelector("#rp-message2").innerText = "AMAZING JOB!";
@@ -270,15 +278,15 @@ function loseGame() {
     document.querySelector("#results-page").style.backgroundColor = "#860000";
     document.querySelector("#rp-message").innerText = "GAME OVER";
     document.querySelector("#rp-results").innerText = "You committed too many fallacies...";
-    document.querySelector("#rp-message2").innerText = "Click below to review.";
+    document.querySelector("#rp-message2").innerText = "Let's try this again.";
 }
 
 // SOPHIA END
 
 // CHLOE START
 
-function reviewPage() {
-    document.querySelector("#review-page").style.display = "none";
+function startReview () {
+    document.querySelector("#results-page").style.display = "none";
     document.querySelector("#fallacy-review-page").style.display = "flex";
 }
 
@@ -287,8 +295,34 @@ function threeFallacies() {
     document.querySelector("#three-fallacies-page").style.display = "flex";
 }
 
+var fallacy_review = "bandwagon";
+
 function fallacyChange() {
-    document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> is an argument that is made due to the manipulation of emotions,<br>rather than using valid reasoning.</p>";
+    if (fallacy_review == "bandwagon") {
+        document.querySelector("#tfp-text").innerHTML = "<p><b>Appeal to Emotion</b> relies on <span class='text-emphasis'>playing with someone's emotions.</span></p><p>Appeal to emotion is an argument that is made due to the manipulation of emotions, rather than the use of valid reasoning.</p>"
+        document.querySelector("#review-icon").style.backgroundImage = "url(icons/appeal-to-emotion.png)";
+        fallacy_review = "emotion";
+
+    } else if (fallacy_review == "emotion") {
+        document.querySelector("#tfp-text").innerHTML = "<p><b>Ad Hominem</b> is similar to <span class='text-emphasis'>attacking an opponent.</span></p><p>An ad hominem argument emotionally attacks a person's character rather than logically arguing against their position.</p>";
+        document.querySelector("#review-icon").style.backgroundImage = "url(icons/adhominem.png)";
+        fallacy_review = "adhominem";
+    } else {
+        document.querySelector("#three-fallacies-page").style.display = "none";
+        document.querySelector("#thank-you-page").style.display = "flex";
+    }
+}
+
+function playAgain() {
+    document.querySelector("#thank-you-page").style.display = "none";
+    document.querySelector("#lets-start-page").style.display = "flex";
+
+    // resets everything
+    resetButtons();
+    resetHealth();
+    data.qnum = 0;
+    game_score = 0;
+    health = 3;
 }
 
 // CHLOE END
